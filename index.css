@@ -180,28 +180,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .prev-month-btn,
-        .next-month-btn {
-            background-color: #f9f9f9;
-            border: none;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .prev-month-btn:hover,
-        .next-month-btn:hover {
-            background-color: #ddd;
-        }
-
-
-
-        .month-year {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -390,8 +368,15 @@
             font-size: 40px;
         }
 
+
+
+
         /* Mobile devices (408 dpi) */
-        @media(min-width: 600px) {
+        @media (max-width: 600px),
+        (max-width: 500px),
+        (max-width: 400px),
+        (max-width: 300px),
+        (max-width: 200px) {
 
             /* Adjust calendar grid */
             .calendar-header,
