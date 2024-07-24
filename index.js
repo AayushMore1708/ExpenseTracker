@@ -101,7 +101,6 @@ function addExpense(event) {
         expenseNameInput.value = "";
         expenseAmountInput.value = "";
         renderExpenses();
-        document.getElementById("expense-amount").focus();
     }
 }
 function subtractExpense(event) {
@@ -119,7 +118,6 @@ function subtractExpense(event) {
         expenseNameInput.value = "";
         expenseAmountInput.value = "";
         renderExpenses();
-        document.getElementById("subexpense-amount").focus();
     }
 }
 function deleteExpense(event) {
