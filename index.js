@@ -86,6 +86,10 @@ function subtractAmount(amount) {
     subexpenseAmountInput.value = amount;
     subtractExpense({ preventDefault: function () { } }); // Call subtractExpense with the specified amount
 }
+
+
+
+
 function addExpense(event) {
     event.preventDefault();
     const expenseNameInput = document.getElementById("expense-name");
@@ -104,20 +108,26 @@ function addExpense(event) {
     }
 }
 function subtractExpense(event) {
-    event.preventDefault();
-    const expenseNameInput = document.getElementById("subexpense-name");
     const expenseAmountInput = document.getElementById("subexpense-amount");
+    const expenseNameInput = document.getElementById("subexpense-name"); // Assuming this is the id of the expense name input field
     const expenseName = expenseNameInput.value.trim();
     const expenseAmount = parseFloat(expenseAmountInput.value);
     if (expenseAmount) {
-        let expense = { amount: -expenseAmount, date: new Date() }; // Subtract the expense amount
-        if (expenseName) {
-            expense.name = expenseName;
+        const totalAmount = expenses.reduce((acc, expense) => acc + expense.amount, 0);
+
+        if (totalAmount >= expenseAmount) {
+
+            let expense = { amount: -expenseAmount, date: new Date() }; // Subtract the expense amount
+            if (expenseName) {
+                expense.name = expenseName;
+            }
+            expenses.push(expense);
+            expenseNameInput.value = "";
+            expenseAmountInput.value = "";
+            renderExpenses();
+        } else {
+            window.alert("Insufficient balance!");
         }
-        expenses.push(expense);
-        expenseNameInput.value = "";
-        expenseAmountInput.value = "";
-        renderExpenses();
     }
 }
 function deleteExpense(event) {
