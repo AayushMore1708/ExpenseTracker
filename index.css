@@ -406,13 +406,6 @@
                 gap: 5px;
             }
 
-            /* Adjust backup and restore buttons */
-            #backup-button,
-            #restore-button {
-                padding: 5px 10px;
-                font-size: 14px;
-            }
-
             /* Adjust container widths */
             .container1,
             .container2 {
