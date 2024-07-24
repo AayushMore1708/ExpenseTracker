@@ -369,13 +369,11 @@
         }
 
 
-
-
         /* Mobile devices (408 dpi) */
         @media (max-width: 600px),
         (max-width: 500px),
-        (max-width: 400px),
-        (max-width: 300px),
+        (min-width: 460px),
+        (min-width: 424px),
         (max-width: 200px) {
 
             /* Adjust calendar grid */
@@ -398,6 +396,11 @@
                 margin-bottom: 5px;
             }
 
+            .expense-btn {
+                font-size: 12px;
+                margin-bottom: auto;
+            }
+
             /* Adjust top right buttons */
             .top-right-buttons {
                 position: relative;
@@ -406,11 +409,15 @@
                 gap: 5px;
             }
 
+            .form-control {
+                font-size: 10px;
+            }
+
             /* Adjust container widths */
             .container1,
             .container2 {
-                width: 40%;
-                margin: 0px;
+                width: 30%;
+                margin: 17px;
                 display: inline-block;
             }
 
