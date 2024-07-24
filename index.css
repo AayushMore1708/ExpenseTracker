@@ -1,0 +1,454 @@
+        body {
+            font-family: cursive, Arial, sans-serif;
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+        }
+
+
+
+        .total-amount-container {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 10px;
+            text-align: center;
+            width: 290px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .total-amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .total-amount::before {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            background-color: #f7f7f7;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid #aaa;
+        }
+
+        .expense-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .expense-amount {
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 10px;
+            width: 100px;
+            /* adjust the width to make it smaller */
+            height: 30px;
+            /* adjust the height to make it smaller */
+            padding: 5px;
+            /* adjust the padding to make it smaller */
+        }
+
+        .expense-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .expense-btn:hover {
+            background-color: #3e8e41;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .expense-btn:active {
+            background-color: #3e8e41;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .delete-btn {
+            background-color: #fff;
+            color: red;
+            border: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .delete-btn:hover {
+            background-color: #f7f7f7;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            background-color: #3e8e41;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+
+
+        .delete-btn {
+            cursor: pointer;
+            color: red;
+            margin-left: 10px;
+            font-size: 14px;
+            background-color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .delete-btn:hover {
+            background-color: #ff0000;
+            color: rgb(0, 0, 0);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .horizontal-scroll-container {
+            overflow-x: auto;
+            /* enable horizontal scrolling */
+            overflow-y: hidden;
+            /* disable vertical scrolling */
+            white-space: nowrap;
+            /* prevent line breaks */
+            padding: 10px;
+            /* add some padding */
+            background-color: #f9f9f9;
+            /* light gray background */
+            border: 1px solid #ddd;
+            /* light gray border */
+            border-radius: 5px;
+            /* rounded corners */
+        }
+
+        #calendar-container {
+            position: fixed;
+            top: 0;
+            font-size: 15px;
+            left: 0;
+            padding: 5px;
+            background-color: #5b99f5;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .prev-month-btn,
+        .next-month-btn {
+            background-color: #f9f9f9;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .prev-month-btn:hover,
+        .next-month-btn:hover {
+            background-color: #ddd;
+        }
+
+
+
+        .month-year {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .top-right-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            gap: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #backup-button,
+        #restore-button {
+            background-color: #00a2ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            gap: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .backup-button:hover,
+        .restore-button:hover {
+            background-color: #007bff;
+        }
+
+        .backup-button:active,
+        .restore-button:active {
+            background-color: #0056b3;
+        }
+
+        .calendar-cell {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .expense-list {
+            list-style: none;
+            /* remove default list styling */
+            margin: 0;
+            /* remove default margin */
+            padding: 0;
+            /* remove default padding */
+            display: flex;
+            /* display list items as flex items */
+            flex-wrap: nowrap;
+            /* prevent line breaks */
+        }
+
+        .expense-list li {
+            margin-right: 20px;
+            /* add some space between list items */
+            flex: 0 0 120px;
+            /* set a fixed width for each list item */
+            background-color: #fff;
+            /* white background */
+            border: 5px solid #00ff73fd;
+            /* light gray border */
+            border-radius: 5px;
+            /* rounded corners */
+            padding: 5px;
+            /* add some padding */
+            text-align: center;
+            /* center the text */
+        }
+
+        .expense-list li:hover {
+            background-color: #a4ffc7;
+            /* light gray background on hover */
+            cursor: pointer;
+            /* change cursor to pointer on hover */
+        }
+
+        .expense-list li .month {
+            font-size: 18px;
+            /* larger font size for the month */
+            font-weight: bold;
+            /* bold font weight for the month */
+            color: #333;
+            /* dark gray text color for the month */
+            margin-bottom: 5px;
+            /* add some space between the month and the amount */
+        }
+
+        .expense-list li span {
+            display: block;
+            /* make each span a block element */
+            padding: 15px;
+            line-height: 1px;
+        }
+
+        span {
+            font-size: 22px;
+        }
+
+        .expense-list li .amount {
+            font-size: 14px;
+            /* smaller font size for the amount */
+            color: #666;
+            /* gray text color for the amount */
+        }
+
+
+
+
+        .container1,
+        .container2 {
+            max-width: 450px;
+            margin: 20px;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            display: inline-block;
+            width: 45%;
+            /* adjust the width to make them side by side */
+        }
+
+        .c {
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Style the entire scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* width of the scrollbar */
+            height: 30px;
+            /* height of the scrollbar */
+            background-color: #f1f1f1;
+            /* background color of the scrollbar */
+        }
+
+        /* Style the track (background) of the scrollbar */
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+            /* background color of the track */
+            border-radius: 10px;
+            /* rounded corners */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            /* add a subtle shadow */
+        }
+
+        /* Style the thumb (scrollable area) of the scrollbar */
+        ::-webkit-scrollbar-thumb {
+            background-color: #00a2ff;
+            /* background color of the thumb */
+            border-radius: 10px;
+            /* rounded corners */
+            border: 2px solid #f1f1f1;
+            /* add a border around the thumb */
+        }
+
+        /* Style the buttons at the top and bottom of the scrollbar */
+        ::-webkit-scrollbar-button {
+            background-color: #f1f1f1;
+            /* background color of the buttons */
+            border: none;
+            /* remove the default border */
+        }
+
+        /* Style the corner of the scrollbar */
+        ::-webkit-scrollbar-corner {
+            background-color: #f1f1f1;
+            /* background color of the corner */
+        }
+
+        .mainHead {
+
+            font-size: 40px;
+        }
+
+        /* Mobile devices (408 dpi) */
+        @media(min-width: 600px) {
+
+            /* Adjust calendar grid */
+            .calendar-header,
+            .calendar-grid {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 5px;
+                display: none;
+            }
+
+            /* Adjust calendar cell */
+            .calendar-cell {
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            /* Adjust month and year */
+            .month-year {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            /* Adjust top right buttons */
+            .top-right-buttons {
+                position: relative;
+                top: 0;
+                right: 0;
+                gap: 5px;
+            }
+
+            /* Adjust backup and restore buttons */
+            #backup-button,
+            #restore-button {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+
+            /* Adjust container widths */
+            .container1,
+            .container2 {
+                width: 40%;
+                margin: 0px;
+                display: inline-block;
+            }
+
+            /* Adjust font sizes */
+            .mainHead {
+                font-size: 24px;
+            }
+
+            /* Adjust scrollbar styles */
+            ::-webkit-scrollbar {
+                width: 5px;
+                height: 15px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #00a2ff;
+                border-radius: 5px;
+            }
+        }

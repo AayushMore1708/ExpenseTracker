@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Expense Tracker</title>
+
+</head>
+
+<body>
+    <h1 class="mainHead" align="center">Expense Tracker</h1>
+    <div class="total-amount-container">
+        <p id="total-amount" class="total-amount">Total Amount: ₹0.00</p>
+
+    </div>
+    <div class="top-right-buttons">
+        <button id="backup-button">Backup</button>
+        <button id="restore-button">Restore</button>
+        <input id="restore-file-input" style="display: none;">
+
+    </div>
+    <div class="c">
+
+        <div class="container1">
+            <h2>Add </h2>
+            <form id="expense-form">
+                <input type="text" id="expense-name" class="form-control" placeholder="Revenue Name (Optional)">
+                <input type="text" id="expense-amount" class="form-control" placeholder="Amount">
+                <button type="submit" class="expense-btn">Add Money</button>
+                <div>
+                    <button type="button" class="expense-btn" onclick="addAmount(1)">1₹</button>
+                    <button type="button" class="expense-btn" onclick="addAmount(2)">2₹</button>
+                    <button type="button" class="expense-btn" onclick="addAmount(5)">5₹</button>
+                    <button type="button" class="expense-btn" onclick="addAmount(10)">10₹</button><br />
+                    <button type="button" class="expense-btn" onclick="addAmount(50)">50₹</button>
+                    <button type="button" class="expense-btn" onclick="addAmount(100)">100₹</button>
+                    <button type="button" class="expense-btn" onclick="addAmount(500)">500₹</button>
+                    <button type="button" class="expense-btn" onclick="addAmount(1000)">1000₹</button>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="container2">
+            <h2>Subtract </h2>
+            <form id="subtract-expense-form">
+                <input type="text" id="subexpense-name" class="form-control" placeholder="Expense Name (Optional)">
+                <input type="text" id="subexpense-amount" class="form-control" placeholder="Amount">
+                <button type="submit" class="expense-btn">Subtract Money</button>
+                <div>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(1)">-1₹</button>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(2)">-2₹</button>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(5)">-5₹</button>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(10)">-10₹</button>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(50)">-50₹</button>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(100)">-100₹</button>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(500)">-500₹</button>
+                    <button type="button" class="expense-btn" onclick="subtractAmount(1000)">-1000₹</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <h1 class="mainHead" align="center">Transactions</h1>
+
+    <div id="calendar-container"></div>
+    <div class="horizontal-scroll-container">
+        <ul id="expense-list" class="expense-list"></ul>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
