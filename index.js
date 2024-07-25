@@ -54,13 +54,14 @@ function renderExpenses() {
 }
 
 function formatDate(date) {
-    const [month, day, year] = date.toLocaleDateString().split('/');
+    const month = date.getMonth(); // get the month as a zero-based value (0-11)
+    const day = date.getDate();
+    const year = date.getFullYear();
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const ordinal = getOrdinal(day);
 
-    return `${ordinal} ${months[month - 1]} ${year}`;
+    return `${ordinal} ${months[month]} ${year}`;
 }
-
 function formatTime(date) {
 
     const time = date.toLocaleTimeString(navigator.language, {
