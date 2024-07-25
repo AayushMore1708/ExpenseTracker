@@ -467,8 +467,9 @@
             }
 
             .expense-btn {
-                font-size: 11px;
-                margin-bottom: 0px;
+                font-size: 10px;
+
+                margin-bottom: -10px;
             }
 
             /* Adjust top right buttons */
@@ -480,7 +481,11 @@
             }
 
             .form-control {
-                font-size: 10px;
+                font-size: 9px;
+            }
+
+            #rem {
+                display: none;
             }
 
             /* Adjust container widths */
