@@ -370,7 +370,77 @@
 
 
         /* Mobile devices (408 dpi) */
-        @media (max-width: 424px) {
+        @media (max-width: 440px) {
+
+            /* Adjust calendar grid */
+            .calendar-header,
+            .calendar-grid {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 5px;
+                display: none;
+            }
+
+            #calendar-container {
+                display: none;
+            }
+
+            /* Adjust calendar cell */
+            .calendar-cell {
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            /* Adjust month and year */
+            .month-year {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            .expense-btn {
+                font-size: 11px;
+                margin-bottom: 0px;
+            }
+
+            /* Adjust top right buttons */
+            .top-right-buttons {
+                position: relative;
+                top: 0;
+                right: 0;
+                gap: 5px;
+            }
+
+            .form-control {
+                font-size: 10px;
+            }
+
+            /* Adjust container widths */
+            .container1,
+            .container2 {
+                width: 7.9rem;
+                margin: 16px;
+                display: inline-block;
+            }
+
+            /* Adjust font sizes */
+            .mainHead {
+                font-size: 24px;
+            }
+
+            /* Adjust scrollbar styles */
+            ::-webkit-scrollbar {
+                width: 5px;
+                height: 20px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #00a2ff;
+                border-radius: 5px;
+            }
+        }
+
+
+
+        @media (max-width: 460px) {
 
             /* Adjust calendar grid */
             .calendar-header,
